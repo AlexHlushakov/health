@@ -41,6 +41,14 @@
             flex-direction: column;
             align-items: center;
          }
+          .test-date {
+            position: absolute;
+            width: 100%;
+            bottom: 100px;
+            left: 74px;
+            color: #7c7c7c;
+            font-size: 20px;
+         }
       }
    </style>
 
@@ -48,6 +56,9 @@
       <img src="https://i.ibb.co/sQxc0YV/health-new-Alex.jpg" alt="health-new-Alex" border="0">
       <div class="time">
          <span id="clock"></span>
+      </div>
+      <div class="test-date">
+         <span id="date"></span>
       </div>
    </div>
 
@@ -60,6 +71,7 @@
             minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
             seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
          document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds;
+         document.getElementById('date').innerHTML = month + '月' + day + '日';
       }
       setInterval(clock, 1000);
       clock();
