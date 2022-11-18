@@ -34,8 +34,9 @@
             position: absolute;
             width: 100%;
             top: 308px;
-            color: rgb(184, 184, 184);
-            font-size: 18px;
+            color: #000;
+            font-size: 34px;
+            font-weight: 900;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -53,13 +54,12 @@
    <script>
       function clock() {
          let date = new Date(),
-            year = date.getFullYear(),
             month = date.getMonth() + 1,
             day = date.getDate(),
             hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
             minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
             seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
-         document.getElementById('clock').innerHTML = year + '/' + month + '/' + day + '  ' + hours + ':' + minutes + ':' + seconds;
+         document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds;
       }
       setInterval(clock, 1000);
       clock();
